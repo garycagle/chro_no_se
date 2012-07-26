@@ -6,6 +6,11 @@ describe "static_pages" do
 	      visit '/static_pages/home'
 	      page.should have_content('Home')
 	    end
+	    it "should have the title 'ChroNoSe | Home'" do
+      		visit '/static_pages/home'
+      		page.should have_selector('title',
+                   :text => "ChroNoSe | Home")
+    	end
 	end
 
 	describe "Help page" do
